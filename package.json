@@ -1,13 +1,13 @@
 {
-  "name": "beyond-css-website-starter-template-v2",
+  "name": "javascript_traversymedia_course_part2",
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --port 11479",
+    "dev": "vite --port 10012",
     "build": "vite build",
-    "preview": "vite preview --port 17946",
+    "preview": "vite preview --port 10187",
     "build-netlify": "vite build --base=/",
-    "preview-netlify": "vite preview --base=/ --port 17947"
+    "preview-netlify": "vite preview --base=/ --port 10188"
   },
   "devDependencies": {
     "sass": "^1.72.0",
