@@ -51,7 +51,38 @@ for (const [key, value] of Object.entries(myCircle)) {
   console.log(`Key: ${key}, Value: ${value}`);
 }
  */
-console.log(myCircle);
+/* console.log(myCircle);
 console.log(Object.getPrototypeOf(myCircle));
 console.log(myCircle.area());
 console.log(myCircle.circumference());
+ */
+
+const rectanglePrototypes = {
+  area: function () {
+    return this.width * this.height;
+  },
+  isSquare: function () {
+    return this.width === this.height;
+  },
+  getName: function () {
+    return this.name;
+  },
+};
+console.log(rectanglePrototypes, typeof rectanglePrototypes);
+
+const rectangleFactory = function (name, width, height) {
+  return Object.create(rectanglePrototypes, {
+    name: {
+      value: name,
+    },
+    height: {
+      value: height,
+    },
+    width: {
+      value: width,
+    },
+  });
+};
+
+const rectA = rectangleFactory("A", 4, 9);
+console.log(rectA.area());
