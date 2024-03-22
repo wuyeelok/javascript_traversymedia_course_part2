@@ -1,10 +1,10 @@
-# Modern JavaScript From The Beginning 2.0 Part 2
+# Modern JavaScript From The Beginning 2.0 (Part 2)
 
 Starting after [Flixx App Section](https://www.traversymedia.com/products/modern-javascript-from-the-beginning-2-0/categories/2152233626/posts/2165170765)
 
 _Table of Contents_
 
-- [Modern JavaScript From The Beginning 2.0 Part 2](#modern-javascript-from-the-beginning-20-part-2)
+- [Modern JavaScript From The Beginning 2.0 (Part 2)](#modern-javascript-from-the-beginning-20-part-2)
   - [Prerequisite](#prerequisite)
   - [How to Use: For Local Development](#how-to-use-for-local-development)
 
