@@ -22,13 +22,21 @@ console.log(myNumObj, myNumObj instanceof Number);
 function Circle(name, radius) {
   this.name = name;
   this.radius = radius;
-  this.area = function () {
+  /* this.area = function () {
     return (Math.PI * this.radius * this.radius).toFixed(2);
   };
   this.circumference = function () {
     return (2 * Math.PI * this.radius).toFixed(2);
-  };
+  }; */
 }
+
+Circle.prototype.area = function () {
+  return (Math.PI * this.radius * this.radius).toFixed(2);
+};
+
+Circle.prototype.circumference = function () {
+  return (2 * Math.PI * this.radius).toFixed(2);
+};
 
 const myCircle = new Circle("ken", 6);
 /* console.log(myCircle.area(), myCircle.circumference());
@@ -45,3 +53,5 @@ for (const [key, value] of Object.entries(myCircle)) {
  */
 console.log(myCircle);
 console.log(Object.getPrototypeOf(myCircle));
+console.log(myCircle.area());
+console.log(myCircle.circumference());
