@@ -19,6 +19,10 @@ export default defineConfig({
           __dirname,
           "src/oop_game_challege/index.html"
         ),
+        oop_classes_private_properties: resolve(
+          __dirname,
+          "src/oop-classes-private-properties/index.html"
+        ),
       },
     },
   },
