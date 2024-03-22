@@ -3,7 +3,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   root: resolve(__dirname, "src/"),
-  base: "/beyond-css-website-starter-template-v2/",
+  base: "/javascript_traversymedia_course_part2/",
   build: {
     outDir: "../dist",
     emptyOutDir: true,
