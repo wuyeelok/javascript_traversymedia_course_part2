@@ -1,6 +1,6 @@
 console.log("OOP - Constructors & Prototypes");
 
-const strLit = "Hi";
+/* const strLit = "Hi";
 const strObj = new String("Yo");
 
 console.log(strLit, typeof strLit);
@@ -17,3 +17,28 @@ console.log(myNum, myNum instanceof Number);
 
 const myNumObj = new Number(2);
 console.log(myNumObj, myNumObj instanceof Number);
+ */
+
+function Circle(name, radius) {
+  this.name = name;
+  this.radius = radius;
+  this.area = function () {
+    return (Math.PI * this.radius * this.radius).toFixed(2);
+  };
+  this.circumference = function () {
+    return (2 * Math.PI * this.radius).toFixed(2);
+  };
+}
+
+const myCircle = new Circle("ken", 6);
+console.log(myCircle.area(), myCircle.circumference());
+
+delete myCircle.name;
+
+console.log(myCircle.hasOwnProperty("name"));
+
+console.log(Object.entries(myCircle));
+
+for (const [key, value] of Object.entries(myCircle)) {
+  console.log(`Key: ${key}, Value: ${value}`);
+}
