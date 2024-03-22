@@ -15,6 +15,10 @@ export default defineConfig({
           __dirname,
           "src/oop_constructors_prototypes/index.html"
         ),
+        oop_game_challege: resolve(
+          __dirname,
+          "src/oop_game_challege/index.html"
+        ),
       },
     },
   },
