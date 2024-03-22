@@ -31,7 +31,7 @@ function Circle(name, radius) {
 }
 
 const myCircle = new Circle("ken", 6);
-console.log(myCircle.area(), myCircle.circumference());
+/* console.log(myCircle.area(), myCircle.circumference());
 
 delete myCircle.name;
 
@@ -42,3 +42,6 @@ console.log(Object.entries(myCircle));
 for (const [key, value] of Object.entries(myCircle)) {
   console.log(`Key: ${key}, Value: ${value}`);
 }
+ */
+console.log(myCircle);
+console.log(Object.getPrototypeOf(myCircle));
