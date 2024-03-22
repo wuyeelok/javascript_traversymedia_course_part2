@@ -1,5 +1,6 @@
 console.log("oop-classes-private-properties");
 
+/*
 function Rectangle(name, width, height) {
   this.name = name;
   this.width = width;
@@ -54,3 +55,56 @@ const square = new Rectangle2("square", 30, 30);
 console.log(square.area());
 console.log(square.isSquare());
 square.logArea();
+ */
+
+class Vechicle {
+  constructor(weight, owner) {
+    this.weight = weight;
+    this.owner = owner;
+  }
+
+  status() {
+    return `This vechicle is owned by ${this.owner} and weigh ${this.weight}kg`;
+  }
+}
+
+const myV = new Vechicle(560, "Ken");
+
+/* console.log(myV);
+console.log(myV.status()); */
+
+class Car extends Vechicle {
+  constructor(weight, owner, numOfDoors) {
+    super(weight, owner);
+
+    this.numOfDoors = numOfDoors;
+  }
+
+  status() {
+    return `This car weigh ${this.weight}kg, own by ${this.owner} and has ${this.numOfDoors} door(s)`;
+  }
+}
+
+const myCar = new Car(500, "Tom", 4);
+/* console.log(myCar);
+console.log(myCar.status());
+
+console.log(myCar instanceof Vechicle);
+console.log(myCar instanceof Car);
+ */
+
+class Ship extends Vechicle {
+  constructor(weight, owner, displacement) {
+    super(weight, owner);
+
+    this.displacement = displacement;
+  }
+
+  status() {
+    return `This ship is owned by ${this.owner} and has ${this.weight} tons and has displacement ${this.displacement} tons`;
+  }
+}
+
+const myArr = [myV, myCar, new Ship("LN", 300, 60900)];
+
+myArr.forEach((i) => console.log(i.status()));
