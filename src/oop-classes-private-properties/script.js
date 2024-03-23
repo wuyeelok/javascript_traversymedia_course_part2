@@ -68,7 +68,13 @@ class Vechicle {
   }
 }
 
+function status2(date) {
+  return `Hello ${this.owner}! ${date}`;
+}
+
 const myV = new Vechicle(560, "Ken");
+
+console.log(status2.apply(myV, [new Date()]));
 
 /* console.log(myV);
 console.log(myV.status()); */
@@ -86,6 +92,8 @@ class Car extends Vechicle {
 }
 
 const myCar = new Car(500, "Tom", 4);
+console.log(status2.apply(myCar, [new Date("2024-01-25")]));
+
 /* console.log(myCar);
 console.log(myCar.status());
 
