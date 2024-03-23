@@ -14,3 +14,22 @@ console.log("function bind this example!");
 }
 
 const app = new App(); */
+
+class Chair {
+  constructor(brand, weight) {
+    this.brand = brand;
+    this.weight = weight;
+  }
+
+  getBrand() {
+    return this.brand;
+  }
+}
+
+const chair = new Chair("IEKA", 40);
+
+console.log(chair.getBrand());
+
+document.querySelector("button").addEventListener("click", () => {
+  alert("Clicked");
+});
