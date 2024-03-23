@@ -113,6 +113,9 @@ class Ship extends Vechicle {
   }
 }
 
-const myArr = [myV, myCar, new Ship("LN", 300, 60900)];
+const myArr = [myV, myCar, new Ship(300, "LN", 60900)];
 
 myArr.forEach((i) => console.log(i.status()));
+
+const myShip = new Ship(900, "Fin", 78942);
+console.log(status2.call(myShip, new Date()));
