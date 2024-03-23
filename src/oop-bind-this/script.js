@@ -44,3 +44,14 @@ class Coordinate {
 const c1 = new Coordinate(5, 10);
 const c2 = new Coordinate(74, 235);
 console.log(c1, c2);
+
+function printXY() {
+  console.log(`X is ${this.x}, Y is ${this.y}!`);
+}
+
+const coordinates = [c1, c2];
+
+for (const coor of coordinates) {
+  const bindedPrintXYFunc = printXY.bind(coor);
+  bindedPrintXYFunc();
+}
