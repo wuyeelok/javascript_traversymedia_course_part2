@@ -19,17 +19,15 @@ class Chair {
   constructor(brand, weight) {
     this.brand = brand;
     this.weight = weight;
+
+    document.querySelector("button").addEventListener("click", this.getBrand);
   }
 
   getBrand() {
-    return this.brand;
+    alert(this.brand);
   }
 }
 
 const chair = new Chair("IEKA", 40);
 
-console.log(chair.getBrand());
-
-document.querySelector("button").addEventListener("click", () => {
-  alert("Clicked");
-});
+// console.log(chair.getBrand());
