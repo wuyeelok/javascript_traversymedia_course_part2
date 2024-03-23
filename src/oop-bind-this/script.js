@@ -20,7 +20,9 @@ class Chair {
     this.brand = brand;
     this.weight = weight;
 
-    document.querySelector("button").addEventListener("click", this.getBrand);
+    document
+      .querySelector("button")
+      .addEventListener("click", this.getBrand.bind(this));
   }
 
   getBrand() {
