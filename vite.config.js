@@ -23,6 +23,7 @@ export default defineConfig({
           __dirname,
           "src/oop-classes-private-properties/index.html"
         ),
+        oop_bind_this: resolve(__dirname, "src/oop-bind-this/index.html"),
       },
     },
   },
