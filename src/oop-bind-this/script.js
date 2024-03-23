@@ -33,3 +33,14 @@ class Chair {
 const chair = new Chair("IEKA", 40);
 
 // console.log(chair.getBrand());
+
+class Coordinate {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+}
+
+const c1 = new Coordinate(5, 10);
+const c2 = new Coordinate(74, 235);
+console.log(c1, c2);
