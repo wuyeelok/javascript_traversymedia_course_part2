@@ -86,3 +86,34 @@ function displayOwnerAndLocation() {
 
 const mac = new Restaurant("Ray", "ABC street", 1990);
 displayOwnerAndLocation.call(mac);
+
+function Teacher(firstName, lastName) {
+  this._firstName = firstName;
+  this._lastName = lastName;
+
+  Object.defineProperty(this, "firstName", {
+    get: function () {
+      return this.capFirst(this._firstName);
+    },
+    set: function (value) {
+      this._firstName = value;
+    },
+  });
+
+  Object.defineProperty(this, "lastName", {
+    get: function () {
+      return this._lastName;
+    },
+    set: function (value) {
+      this._lastName = value;
+    },
+  });
+}
+
+Teacher.prototype.capFirst = function (value) {
+  return value.charAt(0).toUpperCase() + value.slice(1);
+};
+
+const t = new Teacher("JJ", "UU");
+t.firstName = "ken";
+console.log(t.firstName);
