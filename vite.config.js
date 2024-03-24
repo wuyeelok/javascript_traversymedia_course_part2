@@ -28,6 +28,10 @@ export default defineConfig({
           __dirname,
           "src/oop-getters-setters-classes/index.html"
         ),
+        oop_class_private_fields: resolve(
+          __dirname,
+          "src/oop-private-class-fields/index.html"
+        ),
       },
     },
   },
