@@ -8,3 +8,21 @@ console.log("Test");
 const desc = Object.getOwnPropertyDescriptor(Math, "PI");
 
 console.log(desc, typeof desc);
+
+const myObj = {
+  abc: "ddd",
+  age: 34,
+};
+
+const desc2 = Object.getOwnPropertyDescriptors(myObj);
+console.log(desc2);
+
+Object.defineProperty(myObj, "age", {
+  writable: false,
+  configurable: false,
+  enumerable: false,
+});
+
+const desc3 = Object.getOwnPropertyDescriptors(myObj);
+console.log(desc3);
+myObj.age = 5;

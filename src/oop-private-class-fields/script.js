@@ -27,6 +27,7 @@ class Wallet {
   constructor() {
     this.#balance = 0;
     this.#transactions = [];
+    Object.seal(this);
   }
 
   #processDeposit(amount) {
@@ -66,12 +67,11 @@ console.log(ali);
 
 ali.deposite(10000);
 ali.withdraw(500);
-console.log(
-  ali.balance,
-  ali.transactions.forEach((t) => t.transaction)
-);
+console.log(ali.balance);
+ali.transactions.forEach((t) => t.transaction);
 ali.withdraw(99999999);
-console.log(
-  ali.balance,
-  ali.transactions.forEach((t) => t.transaction)
-);
+console.log(ali.balance);
+ali.transactions.forEach((t) => t.transaction);
+
+ali.prop1 = 88;
+console.log(ali.prop1);
