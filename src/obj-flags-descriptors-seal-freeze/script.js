@@ -4,3 +4,7 @@
 // [[Value]] - the value of the property
 
 console.log("Test");
+
+const desc = Object.getOwnPropertyDescriptor(Math, "PI");
+
+console.log(desc, typeof desc);
