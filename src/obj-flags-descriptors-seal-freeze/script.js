@@ -25,4 +25,4 @@ Object.defineProperty(myObj, "age", {
 
 const desc3 = Object.getOwnPropertyDescriptors(myObj);
 console.log(desc3);
-myObj.age = 5;
+console.log(Object.isFrozen(myObj), Object.isSealed(myObj));
