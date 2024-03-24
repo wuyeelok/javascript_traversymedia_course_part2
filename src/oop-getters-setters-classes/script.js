@@ -117,3 +117,27 @@ Teacher.prototype.capFirst = function (value) {
 const t = new Teacher("JJ", "UU");
 t.firstName = "ken";
 console.log(t.firstName);
+
+// Object literal
+const TeacherObj = {
+  _firstName: "Sam",
+  _lastName: "Fisher",
+
+  get firstName() {
+    return this._firstName;
+  },
+
+  get lastName() {
+    return this._lastName;
+  },
+
+  set lastName(value) {
+    this._lastName = value;
+  },
+};
+
+const person2 = Object.create(TeacherObj);
+person2.lastName = "JLJIJOIJ";
+console.log(person2.lastName);
+
+console.log(TeacherObj);
