@@ -40,3 +40,49 @@ person1.lastName = 'smith';
 console.log(person1.fullName);
 console.log(person1);
  */
+
+class Restaurant {
+  #owner;
+  #location;
+  #foundOnYear;
+
+  constructor(owner, location, year) {
+    this.owner = owner;
+    this.location = location;
+    this.foundOnYear = year;
+  }
+
+  get owner() {
+    return this.#owner;
+  }
+
+  get location() {
+    return this.#location;
+  }
+
+  set owner(owner) {
+    this.#owner = owner.toUpperCase();
+  }
+
+  set location(location) {
+    this.#location = location.toLowerCase();
+  }
+
+  set foundOnYear(year) {
+    console.log("Inside setter!");
+    this.#foundOnYear = year;
+  }
+
+  get foundOnYear() {
+    return this.#foundOnYear;
+  }
+}
+
+function displayOwnerAndLocation() {
+  console.log(
+    `The owner is ${this.owner} and located in ${this.location}, found on ${this.foundOnYear}`
+  );
+}
+
+const mac = new Restaurant("Ray", "ABC street", 1990);
+displayOwnerAndLocation.call(mac);
