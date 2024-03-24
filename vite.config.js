@@ -32,6 +32,10 @@ export default defineConfig({
           __dirname,
           "src/oop-private-class-fields/index.html"
         ),
+        obj_flag_des_seal_freeze: resolve(
+          __dirname,
+          "src/obj-flags-descriptors-seal-freeze/index.html"
+        ),
       },
     },
   },
