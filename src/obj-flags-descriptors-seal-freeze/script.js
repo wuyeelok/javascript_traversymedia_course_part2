@@ -26,3 +26,36 @@ Object.defineProperty(myObj, "age", {
 const desc3 = Object.getOwnPropertyDescriptors(myObj);
 console.log(desc3);
 console.log(Object.isFrozen(myObj), Object.isSealed(myObj));
+
+class Shape {
+  #name;
+
+  constructor(name) {
+    this.#name = name;
+  }
+
+  get name() {
+    return this.#name;
+  }
+}
+
+class Rectangle extends Shape {
+  #width;
+  #height;
+
+  constructor(name, width, height) {
+    super(name);
+    this.#width = width;
+    this.#height = height;
+  }
+
+  log() {
+    console.log(
+      `name: ${this.name}, width: ${this.#width}, height: ${this.#height}`
+    );
+  }
+}
+
+const rr = new Rectangle("Rect", 4, 8);
+rr.log();
+console.log(rr.name);
