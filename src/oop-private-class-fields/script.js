@@ -10,6 +10,14 @@ class Transaction {
     this.#type = type;
     this.#amount = amount;
   }
+
+  get transaction() {
+    console.log(
+      `Prev Bal: ${this.#previousBalance}, type: ${this.#type}, amount: ${
+        this.#amount
+      }`
+    );
+  }
 }
 
 class Wallet {
@@ -58,6 +66,12 @@ console.log(ali);
 
 ali.deposite(10000);
 ali.withdraw(500);
-console.log(ali.balance, ali.transactions);
+console.log(
+  ali.balance,
+  ali.transactions.forEach((t) => t.transaction)
+);
 ali.withdraw(99999999);
-console.log(ali.balance, ali.transactions);
+console.log(
+  ali.balance,
+  ali.transactions.forEach((t) => t.transaction)
+);
